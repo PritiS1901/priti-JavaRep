@@ -20,5 +20,10 @@ registerProvider & deregisterProvider
 **Step 6 & 7:  Health Check and Simplified Circuit breaker**
 Core logic of the health checker is define in the following file: src/main/java/com/registry/ProviderHealthChecker.java
 
+**Step 8: Capacity Limit**
+If full capacity comes to be reached, the provider will automatically set itself in a BUSY state, hence automatically deregistering from the providers registry.
+If all the providers comes to be BUSY, no provider will be available and request won't be processed.
+A single value representing the number of concurrent requests is put under configuration in src/main/resources/application_config.yaml
+
 
 
