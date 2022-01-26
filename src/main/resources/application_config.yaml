@@ -1,0 +1,7 @@
+registry:
+  maxAllowedRegisteredProviders: 10
+  healthCheckFrequencyMillis: 5000
+  healthCheckRequestTimeoutMillis: 10000
+loadBalancer:
+  defaultStrategy: "RANDOM"
+  maxConcurrentWorkersPerProvider: 5
